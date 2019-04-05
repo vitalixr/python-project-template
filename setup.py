@@ -1,6 +1,10 @@
-from setuptools import setup, find_packages
-from pip._internal.download import PipSession
-from pip._internal.req import parse_requirements
+from setuptools import find_packages, setup
+try:
+    from pip.download import PipSession
+    from pip.req import parse_requirements
+except ImportError:
+    from pip._internal.download import PipSession
+    from pip._internal.req import parse_requirements
 
 
 def get_requirements(file_name):

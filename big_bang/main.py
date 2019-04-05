@@ -19,6 +19,7 @@ logger.setLevel(logging.INFO)
 def cli(ctx, debug):
     if debug:
         logger.setLevel(logging.DEBUG)
+    ctx.obj['api'] = None
 
 
 @cli.command()
@@ -29,7 +30,7 @@ def hello(ctx, name):
 
 
 def entry_point():
-    cli()
+    cli(obj={})
 
 
 if __name__ == '__main__':
