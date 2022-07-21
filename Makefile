@@ -1,7 +1,7 @@
 .PHONY: bootstrap
 
 project_name=big-bang
-python_version=3.6.4
+python_version=3.10.4
 pip="$(shell pyenv root)/versions/$(project_name)/bin/pip"
 
 

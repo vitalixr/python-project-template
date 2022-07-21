@@ -2,10 +2,14 @@
 --requirement requirements.txt
 
 # Testing
-pytest==4.1.1
+tox==3.25.1
+pytest==7.1.2
 
 # Linting
-flake8==2.1.0
-flake8-import-order==0.17.1
-pep8==1.4.6
-pyflakes==0.7.3
+pyflakes==2.4.0
+flake8==4.0.1
+flake8-import-order==0.18.1
+pep8==1.7.1
+
+# Debugging
+ipython==8.4.0

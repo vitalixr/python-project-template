@@ -1,18 +1,4 @@
 from setuptools import find_packages, setup
-try:
-    from pip.download import PipSession
-    from pip.req import parse_requirements
-except ImportError:
-    from pip._internal.download import PipSession
-    from pip._internal.req import parse_requirements
-
-
-def get_requirements(file_name):
-    return [
-        str(requirement.req) for requirement in parse_requirements(
-            file_name, session=PipSession()
-        )
-    ]
 
 
 if __name__ == '__main__':
@@ -20,7 +6,9 @@ if __name__ == '__main__':
         name='big-bang',
         version='0.0.1',
         description='A sample Python project',
-        install_requires=get_requirements('requirements.txt'),
+        install_requires=(
+            'click==8.1.3'
+        ),
         include_package_data=True,
         packages=find_packages(),
         entry_points={
