@@ -1,7 +1,8 @@
 # Intro
 
-This is a base python project template. It's ready and for python library and
-for general project.
+This is a base python project template. This template ready as for python library as
+for general projects.
+
 Out of the box you get:
 * `setup.py` friendly package with command-line entrypoint.
 * Testable environment based on `pytest` and `tox`.
@@ -32,7 +33,7 @@ big_bang --help
 
 For simplifying I didn't add templating here, so you need rename a couple of
 variable and files.
-```
+```bash
 cp -r python-project-template new-project
 mv big_bang new_project
 sed -i 's/big-bang/new-project/g' Makefile
