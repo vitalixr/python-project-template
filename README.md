@@ -42,4 +42,6 @@ sed -i 's/big_bang/new_project/g' setup.py
 sed -i 's/big_bang/new_project/g' ./tests/test_main.py
 
 make bootstrap
+pyenv activate new-project
+new_project --help
 ```
